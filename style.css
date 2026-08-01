@@ -7,8 +7,8 @@
 
 body{
     font-family:Arial, sans-serif;
-    background:#0f172a;
-    color:#ffffff;
+    background:#f5f5f5;
+    color:#333;
     line-height:1.6;
 }
 
@@ -18,14 +18,15 @@ nav{
     justify-content:space-between;
     align-items:center;
     padding:20px 8%;
-    background:#111827;
+    background:#0f172a;
     position:sticky;
     top:0;
     z-index:1000;
 }
 
 nav h2{
-    color:#38bdf8;
+    color:#ffffff;
+    font-size:28px;
 }
 
 nav ul{
@@ -38,14 +39,14 @@ nav ul li{
 }
 
 nav ul li a{
-    color:#ffffff;
     text-decoration:none;
+    color:#ffffff;
     font-weight:bold;
     transition:0.3s;
 }
 
 nav ul li a:hover{
-    color:#38bdf8;
+    color:#facc15;
 }
 
 /* Hero */
@@ -64,27 +65,26 @@ nav ul li a:hover{
 .hero-content h1{
     font-size:48px;
     margin-bottom:20px;
+    color:#0f172a;
 }
 
 .hero-content p{
     font-size:18px;
-    margin-bottom:30px;
-    color:#d1d5db;
+    margin-bottom:25px;
 }
 
 .btn{
     display:inline-block;
-    padding:14px 30px;
-    background:#38bdf8;
+    background:#2563eb;
     color:#fff;
-    text-decoration:none;
+    padding:12px 28px;
     border-radius:8px;
+    text-decoration:none;
     transition:0.3s;
 }
 
 .btn:hover{
-    background:#0284c7;
-    transform:translateY(-3px);
+    background:#1d4ed8;
 }
 
 .hero-image{
@@ -93,137 +93,133 @@ nav ul li a:hover{
 }
 
 .hero-image img{
-    width:320px;
-    border-radius:50%;
-    border:5px solid #38bdf8;
+    max-width:100%;
+    border-radius:15px;
 }
-/* About */
-.about{
+/* Products */
+.products{
     padding:80px 8%;
     text-align:center;
 }
 
-.about h2{
+.products h2{
     font-size:36px;
-    color:#38bdf8;
-    margin-bottom:20px;
+    margin-bottom:40px;
+    color:#0f172a;
 }
 
-.about p{
-    max-width:800px;
-    margin:auto;
-    color:#d1d5db;
-    font-size:18px;
+.product-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
 }
 
-/* Skills */
-.skills{
+.product-card{
+    background:#ffffff;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.product-card:hover{
+    transform:translateY(-10px);
+}
+
+.product-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.product-card h3{
+    margin:15px 0 10px;
+}
+
+.product-card p{
+    color:#2563eb;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+/* Categories */
+.categories{
     padding:80px 8%;
+    background:#ffffff;
     text-align:center;
-    background:#111827;
 }
 
-.skills h2{
+.categories h2{
     font-size:36px;
-    color:#38bdf8;
     margin-bottom:40px;
 }
 
-.skills-container{
+.category-container{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
     gap:20px;
 }
 
-.skill-card{
-    background:#1f2937;
-    padding:25px;
+.category-card{
+    background:#2563eb;
+    color:#ffffff;
+    padding:30px 20px;
     border-radius:12px;
+    font-size:20px;
     font-weight:bold;
     transition:0.3s;
+    cursor:pointer;
 }
 
-.skill-card:hover{
-    background:#38bdf8;
-    color:#ffffff;
-    transform:translateY(-8px);
+.category-card:hover{
+    background:#1d4ed8;
+    transform:scale(1.05);
 }
-
-/* Projects */
-.projects{
+/* About */
+.about{
     padding:80px 8%;
     text-align:center;
+    background:#f8fafc;
 }
 
-.projects h2{
+.about h2{
     font-size:36px;
-    color:#38bdf8;
-    margin-bottom:40px;
+    color:#0f172a;
+    margin-bottom:20px;
 }
 
-.project-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+.about p{
+    max-width:700px;
+    margin:auto;
+    font-size:18px;
+    color:#555;
 }
 
-.project-card{
-    background:#1f2937;
-    padding:25px;
-    border-radius:12px;
-    transition:0.3s;
-}
-
-.project-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 10px 20px rgba(56,189,248,0.3);
-}
 /* Contact */
 .contact{
     padding:80px 8%;
     text-align:center;
-    background:#111827;
 }
 
 .contact h2{
     font-size:36px;
-    color:#38bdf8;
     margin-bottom:20px;
+    color:#0f172a;
 }
 
 .contact p{
     font-size:18px;
     margin:10px 0;
-    color:#d1d5db;
 }
 
 /* Footer */
 footer{
-    background:#020617;
+    background:#0f172a;
     color:#ffffff;
     text-align:center;
     padding:20px;
-}
-
-/* Smooth Scrolling */
-html{
-    scroll-behavior:smooth;
-}
-
-/* Animation */
-.project-card,
-.skill-card,
-.btn{
-    transition:0.3s ease;
-}
-
-.btn:hover{
-    transform:scale(1.05);
-}
-
-.project-card:hover,
-.skill-card:hover{
-    transform:translateY(-10px);
 }
 
 /* Mobile Responsive */
@@ -251,8 +247,70 @@ html{
     .hero-content h1{
         font-size:36px;
     }
+}
+/* Smooth Scrolling */
+html{
+    scroll-behavior:smooth;
+}
 
-    .hero-image img{
-        width:220px;
+/* Section Animation */
+.products,
+.categories,
+.about,
+.contact{
+    animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
     }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Button Shadow */
+.btn{
+    box-shadow:0 5px 15px rgba(37,99,235,0.3);
+}
+
+.btn:hover{
+    box-shadow:0 8px 20px rgba(37,99,235,0.5);
+}
+
+/* Card Shadow */
+.product-card:hover,
+.category-card:hover{
+    box-shadow:0 12px 25px rgba(0,0,0,0.2);
+}
+/* Hover Effects */
+.product-card,
+.category-card {
+    transition: 0.3s ease;
+}
+
+.product-card:hover,
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn {
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+img {
+    transition: 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
 }
